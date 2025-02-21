@@ -95,32 +95,7 @@ try {
 } catch (Exception e) {
     System.err.println("Error: " + e.getMessage());
 }
-```
 
-## Project Structure
-
-```
-java/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/
-│       │       └── hyperswitchai/
-│       │           └── examples/
-│       │               ├── CacheToken.java
-│       │               ├── AddKey.java
-│       │               ├── ListKeys.java
-│       │               ├── DeleteKey.java
-│       │               ├── AddAwsCredentials.java
-│       │               ├── AddStrategy.java
-│       │               ├── ListStrategies.java
-│       │               ├── UpdateStrategy.java
-│       │               └── DeleteStrategy.java
-│       └── resources/
-│           └── .env
-├── pom.xml
-└── README.md
-```
 
 ## Dependencies
 

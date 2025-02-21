@@ -6,6 +6,12 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 
 ## Available Examples
 
+### PHP
+- Modern PHP implementation using Guzzle
+- Token caching for efficient authentication
+- Complete examples for all API operations
+- [View PHP Examples](./php)
+
 ### Java
 - Modern Java implementation using `HttpClient`
 - Token caching for efficient authentication
@@ -55,11 +61,12 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 
 ```
 .
+├── curl/              # Curl command examples
 ├── java/              # Java implementation
-├── python/            # Python implementation
 ├── javascript/        # JavaScript implementation
-├── typescript/        # TypeScript implementation
-└── curl/              # Curl command examples
+├── php/               # PHP implementation
+├── python/            # Python implementation
+└── typescript/        # TypeScript implementation
 ```
 
 ## Prerequisites

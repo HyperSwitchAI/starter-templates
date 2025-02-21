@@ -1,0 +1,15 @@
+{
+    "name": "hyperswitchai/examples",
+    "description": "PHP examples for HyperSwitch AI API",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0",
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "HyperSwitchAI\\Examples\\": "src/"
+        }
+    }
+} 
