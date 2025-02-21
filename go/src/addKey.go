@@ -146,7 +146,7 @@ func main() {
 	addKeyReq := AddKeyRequest{
 		KeyID:             "claude-key-1",
 		EncryptionFragment: "OpenThePodBayDoorsHAL-2001",
-		Provider:          "claude",
+		Provider:          "anthropic",
 		APIKey:            "sk-ant-api03-LhOEBAVFlPnTIy8e80m9lNkJpKBSV3v7xSwXkpX4f02lICRAAAAAAAAAAAAAAA",
 	}
 

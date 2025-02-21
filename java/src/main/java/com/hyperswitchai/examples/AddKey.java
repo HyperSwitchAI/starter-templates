@@ -22,7 +22,7 @@ public class AddKey {
             Map<String, String> keyPayload = new HashMap<>();
             keyPayload.put("keyId", "claude-key-1");
             keyPayload.put("encryptionFragment", "OpenThePodBayDoorsHAL-2001");
-            keyPayload.put("provider", "claude");
+            keyPayload.put("provider", "anthropic");
             keyPayload.put("apiKey", "sk-ant-api03-LhOEBAVFlPnTIy8e80m9lNkJpKBSV3v7xSwXkpX4f02lICRAAAAAAAAAAAAAAA");
 
             HttpRequest request = HttpRequest.newBuilder()

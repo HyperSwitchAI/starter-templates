@@ -72,7 +72,7 @@ def main():
             json={
                 'keyId': 'claude-key-1',
                 'encryptionFragment': 'OpenThePodBayDoorsHAL-2001',
-                'provider': 'claude',
+                'provider': 'anthropic',
                 'apiKey': 'sk-ant-api03-LhOEBAVFlPnTIy8e80m9lNkJpKBSV3v7xSwXkpX4f02lICRAAAAAAAAAAAAAAA'
             }
         )
