@@ -56,6 +56,13 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 - Complete examples for all API operations
 - [View R Examples](./r)
 
+### Ruby
+- Modern Ruby implementation using Faraday
+- Token caching for efficient authentication
+- Clear response formatting with colored output
+- Complete examples for all API operations
+- [View Ruby Examples](./ruby)
+
 ### Rust
 - Modern Rust implementation using reqwest and tokio
 - Type-safe implementation with serde
@@ -96,6 +103,7 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 ├── php/               # PHP implementation
 ├── python/            # Python implementation
 ├── r/                 # R implementation
+├── ruby/             # Ruby implementation
 ├── rust/              # Rust implementation
 └── typescript/        # TypeScript implementation
 ```

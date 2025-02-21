@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+
+gem 'dotenv'        # For environment variables
+gem 'faraday'       # For HTTP requests
+gem 'json'          # For JSON handling 
