@@ -15,9 +15,15 @@ USERNAME=your_username
 PASSWORD=your_password
 ```
 
+2. Cache your authentication token:
+```bash
+./cache-token.sh
+```
+This will create a `.token-cache.json` file that other scripts will use.
+
 ## Making Scripts Executable
 
-If you save these commands as shell scripts (e.g., `auth.sh`, `list-keys.sh`), make sure to make them executable:
+Make the scripts executable:
 
 ```bash
 chmod +x *.sh    # Makes all .sh files in the current directory executable
@@ -25,108 +31,56 @@ chmod +x *.sh    # Makes all .sh files in the current directory executable
 chmod +x add-key.sh # Makes a specific script executable
 ```
 
-Then you can run them like this:
+## Available Scripts
+
+### Authentication
+- `cache-token.sh` - Authenticates and caches your token
+- All other scripts will use this cached token automatically
+
+### API Keys
 ```bash
-./auth.sh
+./add-key.sh     # Add a new API key
+./list-keys.sh   # List all API keys
+./delete-key.sh  # Delete an API key
 ```
 
-## Authentication
-
-First, get an authentication token:
-
+### Strategies
 ```bash
-curl -X POST https://api.hyperswitchai.com/auth \
-  -H "Content-Type: application/json" \
-  -d '{
-    "username": "your-email@example.com",
-    "password": "your-password"
-  }'
+./add-strategy.sh      # Add a new strategy
+./list-strategies.sh   # List all strategies
+./update-strategy.sh   # Update an existing strategy
+./delete-strategy.sh   # Delete a strategy
 ```
 
-Save the token from the response for use in subsequent requests.
-
-## API Keys
-
-### List API Keys
+### AWS Credentials
 ```bash
-curl -X GET https://api.hyperswitchai.com/admin/keys/list \
-  -H "Authorization: Bearer YOUR_TOKEN" \
-  -H "Content-Type: application/json"
+./add-aws-credentials.sh  # Add AWS credentials
 ```
 
-### Add API Key
-```bash
-curl -X POST https://api.hyperswitchai.com/admin/keys/add-key \
-  -H "Authorization: Bearer YOUR_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "keyId": "claude-key-1",
-    "encryptionFragment": "your-encryption-fragment",
-    "provider": "anthropic",
-    "apiKey": "your-api-key"
-  }'
-```
+## Example Script Usage
 
-### Delete API Key
+### Adding an API Key
 ```bash
-curl -X POST https://api.hyperswitchai.com/admin/keys/delete-key \
-  -H "Authorization: Bearer YOUR_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "keyId": "claude-key-1"
-  }'
+./add-key.sh
 ```
+This script will:
+- Use the cached token from `.token-cache.json`
+- Send a request to add a new API key
+- Handle success/error responses appropriately
 
-## Strategies
-
-### List Strategies
+### Listing Strategies
 ```bash
-curl -X GET https://api.hyperswitchai.com/admin/strategies/list \
-  -H "Authorization: Bearer YOUR_TOKEN" \
-  -H "Content-Type: application/json"
+./list-strategies.sh
 ```
-
-### Add Strategy
-```bash
-curl -X POST https://api.hyperswitchai.com/admin/strategies/add-strategy \
-  -H "Authorization: Bearer YOUR_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "code": "claude-proxy-1",
-    "type": "proxy",
-    "model": "claude-3-5-sonnet-20240620",
-    "keyId": "claude-key-1",
-    "provider": "anthropic"
-  }'
-```
-
-### Update Strategy
-```bash
-curl -X POST https://api.hyperswitchai.com/admin/strategies/update-strategy \
-  -H "Authorization: Bearer YOUR_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "code": "claude-proxy-1",
-    "type": "proxy",
-    "model": "claude-3-5-haiku-20241022",
-    "keyId": "claude-key-1",
-    "provider": "anthropic"
-  }'
-```
-
-### Delete Strategy
-```bash
-curl -X POST https://api.hyperswitchai.com/admin/strategies/delete-strategy \
-  -H "Authorization: Bearer YOUR_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "code": "claude-proxy-1"
-  }'
-```
+This script will:
+- Use the cached token from `.token-cache.json`
+- Retrieve and display all strategies
+- Format the output for readability
 
 ## Notes
 
-- Replace `YOUR_TOKEN` with the actual token received from the authentication endpoint
-- The token expires after some time, so you'll need to get a new one periodically
-- All requests require the `Content-Type: application/json` header
+- Run `cache-token.sh` first before using other scripts
+- The token cache expires after 1 hour
+- If you get authentication errors, try running `cache-token.sh` again
 - All responses will be in JSON format
+- Scripts will display colored output for success/error states
