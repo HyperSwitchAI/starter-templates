@@ -54,7 +54,7 @@ async function main() {
     console.log('Token:', token);
     
     // Add a new API key
-    const addKeyResponse = await fetch(`${BASE_URL}/admin/keys/addKey`, {
+    const addKeyResponse = await fetch(`${BASE_URL}/admin/keys/add-key`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

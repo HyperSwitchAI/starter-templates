@@ -7,8 +7,13 @@
         "example:getToken": "ts-node src/getToken.ts",
         "example:cacheToken": "ts-node src/cacheToken.ts",
         "example:addKey": "ts-node src/addKey.ts",
+        "example:addAWSCredentials": "ts-node src/addAWSCredentials.ts",
         "example:listKeys": "ts-node src/listKeys.ts",
-        "example:deleteKey": "ts-node src/deleteKey.ts"
+        "example:deleteKey": "ts-node src/deleteKey.ts",
+        "example:addStrategy": "ts-node src/addStrategy.ts",
+        "example:listStrategies": "ts-node src/listStrategies.ts",
+        "example:updateStrategy": "ts-node src/updateStrategy.ts",
+        "example:deleteStrategy": "ts-node src/deleteStrategy.ts"
     },
     "dependencies": {
         "@anthropic-ai/sdk": "^0.33.1",

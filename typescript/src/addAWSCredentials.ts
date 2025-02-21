@@ -52,28 +52,35 @@ async function main() {
     const token = await getToken();
     
     // Add a new API key
-    const deleteKeyResponse = await fetch(`${BASE_URL}/admin/keys/delete-key`, {
+    const addKeyResponse = await fetch(`${BASE_URL}/admin/keys/add-key`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify({
-        keyId: 'claude-key-1'
+        keyId: 'bedrock-key-1',
+        encryptionFragment:'OpenThePodBayDoorsHAL-2001',
+        provider: 'bedrock',
+        accessKeyId: 'AKIDFGRTHTHYTHTY',
+        secretAccessKey: 'ehegruherghekjllkdfjhgkjdfh'
       })
     });
 
-    if (!deleteKeyResponse.ok) {
-      if (deleteKeyResponse.status === 404) {
-        console.log('\n\x1b[33m⚠️  Key not found - it may have already been deleted\x1b[0m');
-        return;
+    if (!addKeyResponse.ok) {
+      if (addKeyResponse.status === 409) {
+        const error = await addKeyResponse.json() as { error?: { code: string } };
+        if (error.error?.code === 'duplicate_key_id') {
+          console.log('\n\x1b[33m⚠️  Key already exists with this ID\x1b[0m');
+          return;
+        }
       }
-      const errorText = await deleteKeyResponse.text();
-      console.error('\n\x1b[31mServer response:', deleteKeyResponse.status, errorText, '\x1b[0m');
-      throw new Error(`Failed to delete key: ${deleteKeyResponse.statusText}`);
+      const errorText = await addKeyResponse.text();
+      console.error('\n\x1b[31mServer response:', addKeyResponse.status, errorText, '\x1b[0m');
+      throw new Error(`Failed to add key: ${addKeyResponse.statusText}`);
     }
 
-    console.log('\n\x1b[32m✅ Key deleted successfully\x1b[0m');
+    console.log('\n\x1b[32m✅ Key added successfully\x1b[0m');
     
   } catch (error) {
     console.error('Error:', error);

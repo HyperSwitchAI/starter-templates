@@ -63,7 +63,7 @@ async function main() {
     const result = await addKeyResponse.json();
     console.log('\n\x1b[32m%s\x1b[0m', '✅ Keys listed successfully', result);
 
-    console.log('Note that neither the API key value nor the encryption fragment are included in the response.');
+    console.log('Note that neither the API key values nor the encryption fragments are included in the response.');
     
   } catch (error) {
     console.error('Error:', error);

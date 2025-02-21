@@ -52,28 +52,28 @@ async function main() {
     const token = await getToken();
     
     // Add a new API key
-    const deleteKeyResponse = await fetch(`${BASE_URL}/admin/keys/delete-key`, {
+    const response = await fetch(`${BASE_URL}/admin/strategies/delete-strategy`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify({
-        keyId: 'claude-key-1'
+        code: 'claude-proxy-1'
       })
     });
 
-    if (!deleteKeyResponse.ok) {
-      if (deleteKeyResponse.status === 404) {
-        console.log('\n\x1b[33m⚠️  Key not found - it may have already been deleted\x1b[0m');
+    if (!response.ok) {
+      if (response.status === 404) {
+        console.log('\n\x1b[33m⚠️  Strategy not found - it may have already been deleted\x1b[0m');
         return;
       }
-      const errorText = await deleteKeyResponse.text();
-      console.error('\n\x1b[31mServer response:', deleteKeyResponse.status, errorText, '\x1b[0m');
-      throw new Error(`Failed to delete key: ${deleteKeyResponse.statusText}`);
+      const errorText = await response.text();
+      console.error('\n\x1b[31mServer response:', response.status, errorText, '\x1b[0m');
+      throw new Error(`Failed to delete strategy: ${response.statusText}`);
     }
 
-    console.log('\n\x1b[32m✅ Key deleted successfully\x1b[0m');
+    console.log('\n\x1b[32m✅ Strategy deleted successfully\x1b[0m');
     
   } catch (error) {
     console.error('Error:', error);
