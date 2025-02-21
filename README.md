@@ -6,6 +6,12 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 
 ## Available Examples
 
+### Go
+- Modern Go implementation using standard library
+- Token caching for efficient authentication
+- Complete examples for all API operations
+- [View Go Examples](./go)
+
 ### PHP
 - Modern PHP implementation using Guzzle
 - Token caching for efficient authentication
@@ -62,6 +68,7 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 ```
 .
 ├── curl/              # Curl command examples
+├── go/                # Go implementation
 ├── java/              # Java implementation
 ├── javascript/        # JavaScript implementation
 ├── php/               # PHP implementation
