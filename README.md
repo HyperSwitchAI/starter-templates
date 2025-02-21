@@ -6,6 +6,12 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 
 ## Available Examples
 
+### Java
+- Modern Java implementation using `HttpClient`
+- Token caching for efficient authentication
+- Complete examples for all API operations
+- [View Java Examples](./java)
+
 ### Python
 - Modern Python implementation using requests library
 - Token caching for efficient authentication
@@ -49,10 +55,11 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 
 ```
 .
+├── java/              # Java implementation
 ├── python/            # Python implementation
 ├── javascript/        # JavaScript implementation
 ├── typescript/        # TypeScript implementation
-└── curl/             # Curl command examples
+└── curl/              # Curl command examples
 ```
 
 ## Prerequisites
@@ -73,5 +80,13 @@ For questions about the HyperSwitch AI service:
 - Visit [HyperSwitchAI.com](https://HyperSwitchAI.com)
 - Check the [API documentation](https://console.hyperswitchai.com/docs.html)
 - Contact HyperSwitch AI support
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
