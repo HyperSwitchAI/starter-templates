@@ -5,7 +5,15 @@ This directory contains examples of how to interact with the Hyperswitch AI API 
 ## Prerequisites
 
 1. Make sure you have `curl` installed on your system
-2. You'll need your Hyperswitch AI username and password
+2. You'll need your HyperswitchAI username and password
+
+## Setup
+
+1. Create a `.env` file in the `curl` directory with your HyperswitchAI credentials:
+```env
+USERNAME=your_username
+PASSWORD=your_password
+```
 
 ## Making Scripts Executable
 

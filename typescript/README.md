@@ -19,7 +19,7 @@ npm install -g typescript
 npm install
 ```
 
-2. Create a .env file in the typescript directory and fill in your username and password. You can rename .env.sample to .env and fill in your own email and password.
+2. Create a .env file in the `typescript` directory and fill in your HyperSwitchAI username and password. You can rename .env.sample to .env and fill in your own email and password.
 
 3. Run the example scripts:
 

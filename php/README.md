@@ -10,18 +10,12 @@ PHP examples for interacting with the HyperSwitch AI API. These examples demonst
 
 ## Setup
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/hyperswitchai-examples.git
-cd hyperswitchai-examples/php
-```
-
-2. Install dependencies:
+1. Install dependencies:
 ```bash
 composer install
 ```
 
-3. Create a `.env` file in the root directory with your credentials:
+2. Create a `.env` file in the `php` directory with your HyperSwitchAI credentials:
 ```env
 USERNAME=your_username
 PASSWORD=your_password

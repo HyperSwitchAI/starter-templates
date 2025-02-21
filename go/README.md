@@ -9,18 +9,12 @@ Go examples for interacting with the HyperSwitch AI API. These examples demonstr
 
 ## Setup
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/hyperswitchai-examples.git
-cd hyperswitchai-examples/go
-```
-
-2. Install dependencies:
+1. Install dependencies:
 ```bash
 go mod tidy
 ```
 
-3. Create a `.env` file in the root directory with your credentials:
+2. Create a `.env` file in the `go` directory with your HyperSwitchAI credentials:
 ```env
 USERNAME=your_username
 PASSWORD=your_password

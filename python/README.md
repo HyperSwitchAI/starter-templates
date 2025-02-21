@@ -21,7 +21,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-3. Create a `.env` file in the root directory with your credentials:
+3. Create a `.env` file in the `python` directory with your HyperSwitchAI credentials:
 ```env
 USERNAME=your_username
 PASSWORD=your_password
