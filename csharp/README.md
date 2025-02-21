@@ -14,7 +14,7 @@ C# examples for interacting with the HyperSwitch AI API. These examples demonstr
 dotnet build
 ```
 
-2. Create a `.env` file in the `csharp` directory with your HyperSwitchAI credentials:
+2. Create a `.env` file in the `csharp/HyperSwitchAI` directory with your HyperSwitchAI credentials:
 ```env
 USERNAME=your_username
 PASSWORD=your_password
