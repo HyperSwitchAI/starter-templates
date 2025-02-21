@@ -6,6 +6,12 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 
 ## Available Examples
 
+### Python
+- Modern Python implementation using requests library
+- Token caching for efficient authentication
+- Complete examples for all API operations
+- [View Python Examples](./python)
+
 ### JavaScript
 - Modern JavaScript implementation using ES modules
 - Token caching for efficient authentication
@@ -43,9 +49,10 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 
 ```
 .
-├── javascript/          # JavaScript implementation
-├── typescript/         # TypeScript implementation
-└── curl/              # Curl command examples
+├── python/            # Python implementation
+├── javascript/        # JavaScript implementation
+├── typescript/        # TypeScript implementation
+└── curl/             # Curl command examples
 ```
 
 ## Prerequisites
