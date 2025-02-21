@@ -1,0 +1,25 @@
+{
+    "name": "hyperswitchai-javascript-starter",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "src/test-client.js",
+    "scripts": {
+        "example:getToken": "node src/getToken.js",
+        "example:cacheToken": "node src/cacheToken.js",
+        "example:addKey": "node src/addKey.js",
+        "example:addAWSCredentials": "node src/addAWSCredentials.js",
+        "example:listKeys": "node src/listKeys.js",
+        "example:deleteKey": "node src/deleteKey.js",
+        "example:addStrategy": "node src/addStrategy.js",
+        "example:listStrategies": "node src/listStrategies.js",
+        "example:updateStrategy": "node src/updateStrategy.js",
+        "example:deleteStrategy": "node src/deleteStrategy.js"
+    },
+    "dependencies": {
+        "@anthropic-ai/sdk": "^0.33.1",
+        "dotenv": "^16.4.7",
+        "firebase": "^9.x.x",
+        "node-fetch": "^2.6.x",
+        "openai": "^4.76.3"
+    }
+}
