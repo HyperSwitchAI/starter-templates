@@ -6,41 +6,12 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 
 ## Available Examples
 
-### Go
-- Modern Go implementation using standard library
+### C#
+- Modern C# implementation using HttpClient
 - Token caching for efficient authentication
+- Command-line interface using CommandLineParser
 - Complete examples for all API operations
-- [View Go Examples](./go)
-
-### PHP
-- Modern PHP implementation using Guzzle
-- Token caching for efficient authentication
-- Complete examples for all API operations
-- [View PHP Examples](./php)
-
-### Java
-- Modern Java implementation using `HttpClient`
-- Token caching for efficient authentication
-- Complete examples for all API operations
-- [View Java Examples](./java)
-
-### Python
-- Modern Python implementation using requests library
-- Token caching for efficient authentication
-- Complete examples for all API operations
-- [View Python Examples](./python)
-
-### JavaScript
-- Modern JavaScript implementation using ES modules
-- Token caching for efficient authentication
-- Complete examples for all API operations
-- [View JavaScript Examples](./javascript)
-
-### TypeScript
-- Type-safe implementation with TypeScript
-- Token caching for efficient authentication
-- Complete examples for all API operations
-- [View TypeScript Examples](./typescript)
+- [View C# Examples](./csharp)
 
 ### Curl
 - Shell script examples using curl
@@ -48,12 +19,48 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 - Useful for testing or shell scripting
 - [View Curl Examples](./curl)
 
+### Go
+- Modern Go implementation using standard library
+- Token caching for efficient authentication
+- Complete examples for all API operations
+- [View Go Examples](./go)
+
+### Java
+- Modern Java implementation using `HttpClient`
+- Token caching for efficient authentication
+- Complete examples for all API operations
+- [View Java Examples](./java)
+
+### JavaScript
+- Modern JavaScript implementation using ES modules
+- Token caching for efficient authentication
+- Complete examples for all API operations
+- [View JavaScript Examples](./javascript)
+
+### PHP
+- Modern PHP implementation using Guzzle
+- Token caching for efficient authentication
+- Complete examples for all API operations
+- [View PHP Examples](./php)
+
+### Python
+- Modern Python implementation using requests library
+- Token caching for efficient authentication
+- Complete examples for all API operations
+- [View Python Examples](./python)
+
 ### Rust
 - Modern Rust implementation using reqwest and tokio
 - Type-safe implementation with serde
 - Token caching for efficient authentication
 - Complete examples for all API operations
 - [View Rust Examples](./rust)
+
+### TypeScript
+- Type-safe implementation with TypeScript
+- Token caching for efficient authentication
+- Complete examples for all API operations
+- [View TypeScript Examples](./typescript)
 
 ## Getting Started
 
@@ -74,6 +81,7 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 
 ```
 .
+├── csharp/            # C# implementation
 ├── curl/              # Curl command examples
 ├── go/                # Go implementation
 ├── java/              # Java implementation
