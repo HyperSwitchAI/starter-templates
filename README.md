@@ -48,6 +48,13 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 - Useful for testing or shell scripting
 - [View Curl Examples](./curl)
 
+### Rust
+- Modern Rust implementation using reqwest and tokio
+- Type-safe implementation with serde
+- Token caching for efficient authentication
+- Complete examples for all API operations
+- [View Rust Examples](./rust)
+
 ## Getting Started
 
 1. Choose your preferred language implementation from the directories above
@@ -73,6 +80,7 @@ This repository contains example code for interacting with the [HyperSwitch AI](
 ├── javascript/        # JavaScript implementation
 ├── php/               # PHP implementation
 ├── python/            # Python implementation
+├── rust/              # Rust implementation
 └── typescript/        # TypeScript implementation
 ```
 
