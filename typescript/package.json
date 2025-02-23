@@ -13,7 +13,21 @@
         "example:addStrategy": "ts-node src/addStrategy.ts",
         "example:listStrategies": "ts-node src/listStrategies.ts",
         "example:updateStrategy": "ts-node src/updateStrategy.ts",
-        "example:deleteStrategy": "ts-node src/deleteStrategy.ts"
+        "example:deleteStrategy": "ts-node src/deleteStrategy.ts",
+        "example:openaiProxy": "ts-node src/openaiProxy.ts",
+        "example:openaiProxyStreaming": "ts-node src/openaiProxyStreaming.ts",
+        "example:claudeProxy": "ts-node src/claudeProxy.ts",
+        "example:claudeProxyStreaming": "ts-node src/claudeProxyStreaming.ts",
+        "example:bedrockProxy": "ts-node src/bedrockProxy.ts",
+        "example:bedrockProxyStreaming": "ts-node src/bedrockProxyStreaming.ts",
+        "example:geminiProxy": "ts-node src/geminiProxy.ts",
+        "example:geminiProxyStreaming": "ts-node src/geminiProxyStreaming.ts",
+        "example:grokProxy": "ts-node src/grokProxy.ts",
+        "example:grokProxyStreaming": "ts-node src/grokProxyStreaming.ts",
+        "example:huggingfaceProxy": "ts-node src/huggingfaceProxy.ts",
+        "example:huggingfaceProxyStreaming": "ts-node src/huggingfaceProxyStreaming.ts",
+        "example:togetheraiProxy": "ts-node src/togetheraiProxy.ts",
+        "example:togetheraiProxyStreaming": "ts-node src/togetheraiProxyStreaming.ts"
     },
     "dependencies": {
         "@anthropic-ai/sdk": "^0.33.1",
